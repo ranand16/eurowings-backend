@@ -28,6 +28,6 @@ app.get('/flights', async (req, res) => {
     res.send(mock_flights);
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}`)
 })
