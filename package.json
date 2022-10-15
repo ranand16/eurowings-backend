@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "(cd eurowings-digital && npm run build) && node server.js",
+    "start": "(cd eurowings-digital && npm i && npm run build) && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf node_modules && rm -rf package-lock.json"
   },
