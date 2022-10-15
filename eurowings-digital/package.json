@@ -25,9 +25,7 @@
     "redux": "^4.2.0",
     "redux-saga": "^1.2.1",
     "webpack-cli": "^4.10.0",
-    "copy-webpack-plugin": "^11.0.0"
-  },
-  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.3",
     "@babel/preset-react": "^7.18.6",
