@@ -7,6 +7,7 @@ import { FlightPrice } from './Components/FlightPrice.jsx';
 import { FlightDetails } from './Components/FlightDetails.jsx';
 import { FlightLogo } from './Components/FlightLogo.jsx';
 import { NoFlightsFound } from './Components/NoFlightsFound.jsx';
+import { SearchFlight } from './Components/SearchFlight.jsx';
 
 const App = () => {
     const [search, setSearch] = useState('')
@@ -27,15 +28,9 @@ const App = () => {
 
     return <div className="container">
         {loading && <Loading />}
-        {flights.length === 0 && !loading && <NoFlightsFound />}
         {error && !loading && <p>{error}</p>}
+        {!loading && !error && <SearchFlight search={search} setSearch={setSearch}  />}
         <div className="d-flex flex-col">
-            <input 
-                type="text" 
-                placeholder="Search origin, destination" 
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-            />
             {
                 flights.length > 0 && flights.map((flight) => (
                     <React.Fragment key={flight["uuid"]}>
@@ -49,6 +44,7 @@ const App = () => {
                 )
             )}
         </div>
+        {flights.length === 0 && !loading && <NoFlightsFound />}
     </div>
 }
 

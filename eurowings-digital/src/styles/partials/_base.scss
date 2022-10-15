@@ -6,20 +6,20 @@
 }
 
 // classes like .h2, .h6 etc
-@each $key, $value in $heading-sizes { 
-    .#{$key}{
-        font-size: #{$value} !important;
-    }
-}
+// @each $key, $value in $heading-sizes { 
+//     .#{$key}{
+//         font-size: #{$value} !important;
+//     }
+// }
 
 // classes like lg-h2, sm-h6 etc
-@each $key, $value in $heading-sizes {
-    @each $sizekey, $sizeValue in $grid-breakpoints {
-        @media all and (min-width: $sizeValue + 1) {
-            .#{$sizekey}-#{$key}{font-size: #{$value} !important;}
-        }
-    }
-}
+// @each $key, $value in $heading-sizes {
+//     @each $sizekey, $sizeValue in $grid-breakpoints {
+//         @media all and (min-width: $sizeValue + 1) {
+//             .#{$sizekey}-#{$key}{font-size: #{$value} !important;}
+//         }
+//     }
+// }
 
 // spacing system from 1*0.25rem to 50*0.25=12.5rem sizes
 @for $i from 1 through 50 {
